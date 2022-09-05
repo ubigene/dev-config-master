@@ -1,0 +1,14 @@
+{
+  "apiVersion": "v1",
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "test-cm",
+    "labels": {
+      "test-label": "test",
+      "app": "test"
+    }
+  },
+  "data": {
+    "key": "some new value"
+  }
+}

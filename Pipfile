@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 jsonnet = "0.18.0"
 jsonpath-ng = "1.5.3"
+kubernetes = "*"
+openshift-client = "*"
 
 [dev-packages]
 IPython = "*"

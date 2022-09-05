@@ -1,5 +1,4 @@
-local lib = import './lib/test2.jsonnet';
-local esm = import '../../lib/esm.libsonnet';
+local lib = import './complex_referenced.jsonnet';
 
 {
   [std.extVar('prefix') + 'Pina Colada']: {
@@ -29,7 +28,7 @@ local esm = import '../../lib/esm.libsonnet';
 
   [std.extVar('prefix') + 'Mimosa']:
     lib.Mimosa.ingredients[0].kind,
-  meow: esm.ref('./lib/cat.jsonnet#cat.paws[0].kind'),
-  meow2: esm.ref('./lib/cat.jsonnet'), 
-  meow3: esm.ref('./lib/cat.jsonnet#cat.paws[1]'), 
+  meow: esm.ref('./types.json'),
+  meow2: esm.ref('./types.json'), 
+  meow3: esm.ref('./types.json'), 
 }
