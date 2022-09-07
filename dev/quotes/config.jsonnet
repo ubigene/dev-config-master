@@ -18,5 +18,9 @@
     {
         "name": "DB_PORT",
         "value": std.toString(esm.ref('../quotes-db/service.jsonnet#spec.ports[0].port'))
+    },
+    {
+        "name": "MISSION",
+        "value": "Try harder!"
     }
 ]
