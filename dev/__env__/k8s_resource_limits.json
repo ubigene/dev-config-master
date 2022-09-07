@@ -1,0 +1,6 @@
+{
+    "service_limits": {
+        "cpu": "1",
+        "memory": "750Mi"
+    }
+}
