@@ -2,26 +2,26 @@
   "kind": "Deployment",
   "apiVersion": "apps/v1",
   "metadata": {
-    name: "quotes",
+    name: "quotesweb",
     "labels": {
-      // "tier": "backend",
       "app": $.metadata.name,
     }
   },
   "spec": {
     "replicas": 1,
     "selector": {
-      "matchLabels": $.spec.template.metadata.labels
+      "matchLabels": $.spec.template.metadata.labels,
     },
     "template": {
       "metadata": {
-        "labels": $.metadata.labels
+        "labels": {
+          "app": $.metadata.labels
+        }
       },
       "spec": {
         "containers": [
           {
             "name": $.metadata.name,
-            "env": esm.ref('./config.jsonnet'),
             image: esm.ref('./version.json#image'),
             "resources": {
               "limits": esm.ref('../__env__/k8s_resource_limits.json#service_limits'),
@@ -30,7 +30,7 @@
             "imagePullPolicy": "Always",
             "ports": [
               {
-                "containerPort": 10000,
+                "containerPort": 3000,
                 "protocol": "TCP"
               }
             ]
