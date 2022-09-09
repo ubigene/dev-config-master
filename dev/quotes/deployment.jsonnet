@@ -25,10 +25,7 @@
             image: esm.ref('./version.json#image'),
             "resources": {
               "limits": esm.ref('../__env__/k8s_resource_limits.json#service_limits'),
-              "requests": {
-                "cpu": "10m",
-                "memory": "64Mi"
-              }
+              "requests": esm.ref('../__env__/k8s_resource_limits.json#service_requests')
             },
             "imagePullPolicy": "Always",
             "ports": [

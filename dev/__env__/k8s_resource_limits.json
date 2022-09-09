@@ -2,5 +2,9 @@
     "service_limits": {
         "cpu": "1",
         "memory": "750Mi"
+    },
+    "service_requests": {
+        "cpu": "10m",
+        "memory": "64Mi"
     }
 }
