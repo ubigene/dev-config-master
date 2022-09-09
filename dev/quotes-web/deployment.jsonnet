@@ -14,7 +14,9 @@
     },
     "template": {
       "metadata": {
-        "labels": $.metadata.labels,
+        "labels": {
+          "app": $.metadata.labels
+        }
       },
       "spec": {
         "containers": [
