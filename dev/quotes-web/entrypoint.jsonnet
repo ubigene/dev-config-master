@@ -9,6 +9,7 @@
         "items": [
             esm.ref('./deployment.jsonnet'),
             esm.ref('./service.jsonnet'),
+            esm.ref('./route.jsonnet'),
         ]
     }
 }
