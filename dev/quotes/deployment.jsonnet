@@ -9,7 +9,7 @@
     }
   },
   "spec": {
-    "replicas": 2,
+    "replicas": 4,
     "selector": {
       "matchLabels": $.spec.template.metadata.labels
     },
