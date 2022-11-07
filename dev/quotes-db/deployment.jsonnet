@@ -23,10 +23,8 @@
             env: esm.ref('./config.jsonnet'),
             image: esm.ref('./version.json#image'),
             "resources": {
-              "limits": {
-                "memory": "256Mi",
-                "cpu": "500m",
-              }
+              "limits": esm.ref('../__env__/k8s_resource_limits_db.json#service_limits'),
+              "requests": esm.ref('../__env__/k8s_resource_limits_db.json#service_requests')
             },
             "ports": [
               {

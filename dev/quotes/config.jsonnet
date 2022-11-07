@@ -21,6 +21,6 @@
     },
     {
         "name": "MISSION",
-        "value": "Try harder!"
+        "value": "New mission"
     }
 ]
