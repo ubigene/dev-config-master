@@ -1,7 +1,7 @@
 {
     "service_limits": {
-        "cpu": "1",
-        "memory": "750Mi"
+        "cpu": "100m",
+        "memory": "950Mi"
     },
     "service_requests": {
         "cpu": "10m",
