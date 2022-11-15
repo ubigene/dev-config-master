@@ -22,8 +22,8 @@
             "name": $.metadata.name,
             image: esm.ref('./version.json#image'),
             "resources": {
-              "limits": esm.ref('../__env__/k8s_resource_limits.json#service_limits'),
-              "requests": esm.ref('../__env__/k8s_resource_limits.json#service_requests')
+              "limits": esm.ref('../__env__/frontend_resource_limits.json#service_limits'),
+              "requests": esm.ref('../__env__/frontend_resource_limits.json#service_requests')
             },
             "imagePullPolicy": "Always",
             "ports": [
